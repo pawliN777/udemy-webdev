@@ -1,0 +1,13 @@
+const number1 = 10;
+const number2 = 4;
+const userAge = "10";
+const userHeight = 1.8;
+console.log(number1 + number2);
+console.log(number1 - number2);
+console.log(number1 * number2);
+console.log(number1 ** number2);
+console.log(number1 % number2);
+console.log(number1 / number2);
+console.log(parseInt(userAge));
+console.log(parseFloat(userHeight));
+console.log(typeof userHeight);

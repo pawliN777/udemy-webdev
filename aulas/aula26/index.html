@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../pipastyle/css/main.css">
+    <title>Aula 26 - Calculadora de IMC</title>
+</head>
+<body class="body-container col">
+    <section class="container card glass-light">
+        <div class="container-tab border-light rad-2">
+            <div>
+                <h2>IMC</h2>
+                <p>Menor que 18,5</p>
+                <p>Entre 18,5 e 24,9</p>
+                <p>Entre 25 e 29,9</p>
+                <p>Entre 30 e 34,9</p>
+                <p>Entre 35 e 39,9</p>
+                <p>Mais que 40</p>
+            </div>
+            <div>
+                <h2>Descrição</h2>
+                <p>Abaixo do peso</p>
+                <p>Peso normal</p>
+                <p>Sobrepeso</p>
+                <p>Obesidade grau 1</p>
+                <p>Obesidade grau 2</p>
+                <p>Obesidade grau 3</p>
+            </div>
+        </div>
+        <form id="form-imc">
+            <label for="input-weight">Peso (em kg)</label>
+            <input type="text" id="input-weight" class="input-light" placeholder="Ex 80">
+            <label for="input-height">Altura (em metros)</label>
+            <input type="text" id="input-height" class="input-light" placeholder="Ex 1.80">
+            <div id="input-error" class="mini-block"></div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+    <section id="show-section" class="container card glass-light hidden">
+        <h2>Resultado</h2>
+        <div id="show-result"></div>
+    </section>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-2);
+}
+
+input {
+    border-radius: var(--radius-2);
+    padding: var(--space-3) var(--space-4);
+    transition: box-shadow var(--transition-speed);
+}
+
+.input-dark { background-color: var(--bg-color-input-dark); }
+.input-dark::placeholder { color: var(--font-light); }
+.input-dark:hover { box-shadow: var(--box-shadow-alt-inset-hover); }
+.input-dark:focus { box-shadow: var(--box-shadow-alt-inset-focus); }
+
+.input-light { background-color: var(--bg-color-input-light); }
+.input-light::placeholder { color: var(--font-dark); }
+.input-light:hover { box-shadow: var(--box-shadow-inset-hover); }
+.input-light:focus { box-shadow: var(--box-shadow-inset-focus); }
+
+input:focus, .input-light:focus, .input-dark:focus {
+    outline: none;
+    outline-offset: -1px;
+}
+
