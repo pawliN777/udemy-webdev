@@ -1,0 +1,52 @@
+.fade-in {
+  animation: fadeIn var(--transition-normal) ease-in-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight var(--transition-normal) ease-out forwards;
+}
+
+.scale-in {
+  animation: scaleIn var(--transition-fast) ease-out forwards;
+}
+
+.transition-all { transition: all var(--transition-normal); }
+.transition-fast { transition: all var(--transition-fast); }
+.transition-slow { transition: all var(--transition-slow); }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  transition: transform var(--transition-fast);
+}
+
+.hover-opacity:hover {
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+}

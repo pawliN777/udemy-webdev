@@ -7,21 +7,21 @@ imcForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
     setElement('#input-error', '');
-    removeClass('#input-error', 'error');
-    setClass('#show-section', 'hidden');
+    setClass('#show-section', 'd-none');
+    setClass('#input-error', 'd-none');
 
     const weight = getNumber('#input-weight');
     const height = getNumber('#input-height');
 
     if (!weight) { 
         setElement('#input-error', '<p>Peso inválido</p>');
-        setClass('#input-error', 'error');
+        removeClass('#input-error', 'd-none');
         return; 
     }
     
     if (!height) { 
         setElement('#input-error', '<p>Altura inválida</p>'); 
-        setClass('#input-error', 'error');
+        removeClass('#input-error', 'd-none');
         return; 
     }
 
@@ -29,5 +29,6 @@ imcForm.addEventListener('submit', function (e) {
     const diag = imcDiag(imc);
 
     setElement('#show-result', `<p>${imc.toFixed(2)} (${diag})</p>`);
-    removeClass('#show-section', 'hidden');
+    setClass('#show-result', 'text-center');
+    removeClass('#show-section', 'd-none');
 });
