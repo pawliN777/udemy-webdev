@@ -24,7 +24,7 @@
 
 .card-header {
   padding: var(--space-4) var(--space-5);
-  border-bottom: 1px solid var(--color-gray-100);
+  border-bottom: 1px solid var(--color-gray-200);
 }
 
 .card-title {
