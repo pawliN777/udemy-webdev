@@ -29,3 +29,15 @@
 
 .font-sans { font-family: var(--font-sans) !important; }
 .font-mono { font-family: var(--font-mono) !important; }
+
+.text-truncate {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    display: block !important;
+}
+
+.text-break {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+}

@@ -1,10 +1,18 @@
+import { toggleTheme } from './theme.js';
+
+const btn = document.querySelector('#theme-toggle');
+    
+if (btn) {
+    btn.addEventListener('click', toggleTheme);
+}
+
 const taskInput = document.querySelector('#task-input');
 const taskButton = document.querySelector('#task-button');
 const taskList = document.querySelector('#task-list');
 
 function createLi() {
     const li = document.createElement('li');
-    li.className = 'card-outline d-flex justify-content-between align-items-center p-2 rounded-md mb-2';
+    li.className = 'card-outline d-flex justify-content-between align-items-center p-2 rounded-md mb-2 overflow-hidden';
     return li;
 }
 
@@ -14,17 +22,24 @@ function inputClear() {
 }
 
 function createDeleteButton(li) {
-  const deleteButton = document.createElement('button');
-  deleteButton.textContent = 'Remover';
-  deleteButton.className = 'btn btn-danger btn-sm ml-2';
-  li.appendChild(deleteButton);
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Remover';
+    deleteButton.className = 'btn btn-danger btn-sm ml-2 flex-shrink-0';
+    li.appendChild(deleteButton);
 }
+
 function addTask(textInput) {
     const li = createLi();
-    li.innerText = textInput;
+    
+    const span = document.createElement('span');
+    span.innerText = textInput;
+    span.className = 'text-truncate flex-fill';
+    
+    li.appendChild(span); 
+    createDeleteButton(li); 
+    
     taskList.appendChild(li);
     inputClear();
-    createDeleteButton(li);
     saveTask();
 }
 
@@ -60,8 +75,7 @@ function saveTask() {
     const list = [];
 
     for (let task of tasks) {
-        let textTask = task.innerText;
-        textTask = textTask.replace('Remover', '').trim();
+        let textTask = task.querySelector('span').innerText;
         list.push(textTask);
     }
 

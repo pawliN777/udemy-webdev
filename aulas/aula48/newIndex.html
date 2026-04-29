@@ -6,18 +6,21 @@
     <link rel="stylesheet" href="../../pipastyle/main.css">
     <title>Aula 48 - Lista de Tarefas Nova</title>
 </head>
-<body class="bg-gray-200 py-5">
-    <main class="container">
-        <section class="card">
+<body class="bg-gray-200">
+    <main class="min-h-screen d-flex justify-content-center align-items-center flex-column">
+        <div class="card shadow-lg p-2 mb-5 rounded-full">
+            <button id="theme-toggle" class="btn btn-secondary square-md btn-icon-circle rounded-full">🌗</button>
+        </div>
+        <section class="card w-50">
             <header class="card-header bg-white">
                 <h1 class="card-title text-center text-primary text-3xl">Lista de Tarefas</h1>
             </header>
             <div class="card-body p-5">
                 <div class="form-group mb-4">
-                    <input id="task-input" type="text" class="form-control w-100 p-3 text-lg" placeholder="O que precisa ser feito?">
+                    <input id="task-input" type="text" class="form-control w-100" placeholder="O que precisa ser feito?">
                 </div>
-                <div class="form-group mb-0 text-right">
-                    <button id="task-button" class="btn btn-primary btn-lg w-100">Adicionar</button>
+                <div class="form-group text-right">
+                    <button id="task-button" class="btn btn-primary btn-md w-100">Adicionar</button>
                 </div>
                 <ul id="task-list" class="m-0 p-0 mt-4"></ul>
             </div>

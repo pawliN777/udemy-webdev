@@ -48,3 +48,5 @@
 .shadow-sm { box-shadow: var(--shadow-sm) !important; }
 .shadow-md { box-shadow: var(--shadow-md) !important; }
 .shadow-lg { box-shadow: var(--shadow-lg) !important; }
+
+.flex-shrink-0 { flex-shrink: 0 !important; }
