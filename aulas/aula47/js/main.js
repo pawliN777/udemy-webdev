@@ -26,19 +26,19 @@ document.addEventListener('click', function (e) {
 
     if (el.id === 'start') {
         startTimer();
-        removeClass('#timer', 'text-error');
+        removeClass('#timer', 'text-danger');
     }
 
     if (el.id === 'pause') {
         pauseTimer();
         if (second > 0) {
-        setClass('#timer', 'text-error');
+        setClass('#timer', 'text-danger');
         }
     }
 
     if (el.id === 'reset') {
         resetTimer();
         timerDisplay.innerHTML = '00:00:00';
-        removeClass('#timer', 'text-error');
+        removeClass('#timer', 'text-danger');
     }
 })

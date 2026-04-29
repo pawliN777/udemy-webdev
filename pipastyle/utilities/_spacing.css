@@ -101,3 +101,12 @@
 .pr-5 { padding-right: var(--space-5) !important; }
 .px-5 { padding-left: var(--space-5) !important; padding-right: var(--space-5) !important; }
 .py-5 { padding-top: var(--space-5) !important; padding-bottom: var(--space-5) !important; }
+
+.flex-fill {
+  flex: 1 1 auto !important;
+}
+
+.gap-1 { gap: var(--space-1) !important; }
+.gap-2 { gap: var(--space-2) !important; }
+.gap-3 { gap: var(--space-3) !important; }
+.gap-4 { gap: var(--space-4) !important; }

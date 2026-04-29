@@ -1,0 +1,12 @@
+.w-screen { width: 100vw !important; }
+.h-screen { height: 100vh !important; }
+
+.min-w-100 { min-width: 100% !important; }
+.min-h-100 { min-height: 100% !important; }
+
+.min-h-screen { min-height: 100vh !important; }
+.max-h-screen { max-height: 100vh !important; }
+
+.w-50 { width: 50% !important; }
+.w-75 { width: 75% !important; }
+.w-25 { width: 25% !important; }
