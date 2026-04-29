@@ -12,7 +12,7 @@ const taskList = document.querySelector('#task-list');
 
 function createLi() {
     const li = document.createElement('li');
-    li.className = 'card-outline d-flex justify-content-between align-items-center p-2 rounded-md mb-2 overflow-hidden';
+    li.className = 'bg-gray-200 d-flex justify-content-between align-items-center p-4 rounded-md mb-2 overflow-hidden';
     return li;
 }
 
@@ -23,8 +23,8 @@ function inputClear() {
 
 function createDeleteButton(li) {
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Remover';
-    deleteButton.className = 'btn btn-danger btn-sm ml-2 flex-shrink-0';
+    deleteButton.textContent = '❌';
+    deleteButton.className = 'btn flex-shrink-0';
     li.appendChild(deleteButton);
 }
 
@@ -63,7 +63,7 @@ taskButton.addEventListener('click', function() {
 document.addEventListener('click', function(e) {
     const el = e.target;
     
-    if (el.textContent === 'Remover') {
+    if (el.textContent === '❌') {
         el.parentElement.remove();
         saveTask();
     }
