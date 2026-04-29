@@ -10,3 +10,27 @@
 .w-50 { width: 50% !important; }
 .w-75 { width: 75% !important; }
 .w-25 { width: 25% !important; }
+
+.square-sm { 
+    width: 2rem !important; 
+    height: 2rem !important; 
+    display: inline-flex !important; 
+    align-items: center !important; 
+    justify-content: center !important; 
+}
+
+.square-md { 
+    width: 2.5rem !important; 
+    height: 2.5rem !important; 
+    display: inline-flex !important; 
+    align-items: center !important; 
+    justify-content: center !important; 
+}
+
+.square-lg { 
+    width: 3rem !important; 
+    height: 3rem !important; 
+    display: inline-flex !important; 
+    align-items: center !important; 
+    justify-content: center !important; 
+}

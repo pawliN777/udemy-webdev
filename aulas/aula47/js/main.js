@@ -1,5 +1,6 @@
 import { setClass, removeClass } from "./helpers.js";
 import { getSecond } from "./logic.js";
+import { toggleTheme } from './theme.js';
 
 const timerDisplay = document.querySelector('#timer');
 let second = 0;
@@ -42,3 +43,9 @@ document.addEventListener('click', function (e) {
         removeClass('#timer', 'text-danger');
     }
 })
+  
+const btn = document.querySelector('#theme-toggle');
+    
+if(btn) {
+    btn.addEventListener('click', toggleTheme);
+}

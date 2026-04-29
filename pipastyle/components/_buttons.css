@@ -83,3 +83,12 @@
   display: flex;
   width: 100%;
 }
+
+.btn-icon-circle {
+    padding: 0 !important;
+    line-height: 0; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
