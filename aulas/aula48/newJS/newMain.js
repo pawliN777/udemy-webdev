@@ -23,8 +23,8 @@ function inputClear() {
 
 function createDeleteButton(li) {
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = '❌';
-    deleteButton.className = 'btn flex-shrink-0';
+    deleteButton.textContent = 'Remover';
+    deleteButton.className = 'btn btn-sm flex-shrink-0 text-danger';
     li.appendChild(deleteButton);
 }
 
@@ -33,7 +33,7 @@ function addTask(textInput) {
     
     const span = document.createElement('span');
     span.innerText = textInput;
-    span.className = 'text-truncate flex-fill';
+    span.className = 'text-break flex-fill';
     
     li.appendChild(span); 
     createDeleteButton(li); 
@@ -63,7 +63,7 @@ taskButton.addEventListener('click', function() {
 document.addEventListener('click', function(e) {
     const el = e.target;
     
-    if (el.textContent === '❌') {
+    if (el.textContent === 'Remover') {
         el.parentElement.remove();
         saveTask();
     }

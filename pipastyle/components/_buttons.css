@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  border: 1px solid transparent;
   border-radius: var(--radius-md);
   font-family: var(--font-sans);
   font-weight: var(--weight-medium);
@@ -60,8 +59,13 @@
 
 .btn-outline {
   background-color: transparent;
-  border-color: var(--color-gray-300);
+  box-shadow: inset 0 0 0 1px var(--color-gray-300);
   color: var(--color-gray-900);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-gray-200);
+  box-shadow: inset 0 0 0 1px var(--color-gray-500);
 }
 
 .btn-ghost {
