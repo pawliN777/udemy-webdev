@@ -1,5 +1,6 @@
 import { imcCalc, imcDiag } from './logic.js';
 import { setElement, removeClass, getNumber, setClass } from './helpers.js';
+import { toggleTheme } from './theme.js';
 
 const imcForm = document.querySelector('#form-imc');
 
@@ -32,3 +33,9 @@ imcForm.addEventListener('submit', function (e) {
     setClass('#show-result', 'text-center');
     removeClass('#show-section', 'd-none');
 });
+  
+const btn = document.querySelector('#theme-toggle');
+    
+if (btn) {
+    btn.addEventListener('click', toggleTheme);
+}
