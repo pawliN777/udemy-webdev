@@ -1,6 +1,6 @@
 .text-xs { font-size: var(--text-xs) !important; }
 .text-sm { font-size: var(--text-sm) !important; }
-.text-base { font-size: var(--text-base) !important; }
+.text-base { font-size: var(--text-md) !important; }
 .text-lg { font-size: var(--text-lg) !important; }
 .text-xl { font-size: var(--text-xl) !important; }
 .text-2xl { font-size: var(--text-2xl) !important; }

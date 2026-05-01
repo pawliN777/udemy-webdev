@@ -12,7 +12,7 @@ const taskList = document.querySelector('#task-list');
 
 function createLi() {
     const li = document.createElement('li');
-    li.className = 'bg-gray-200 d-flex justify-content-between align-items-center p-4 rounded-md mb-2 overflow-hidden';
+    li.className = 'bg-gray-200 d-flex justify-content-between align-items-center p-4 rounded-md overflow-hidden';
     return li;
 }
 
@@ -24,7 +24,7 @@ function inputClear() {
 function createDeleteButton(li) {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Remover';
-    deleteButton.className = 'btn btn-sm flex-shrink-0 text-danger';
+    deleteButton.className = 'btn text-xs flex-shrink-0 text-danger';
     li.appendChild(deleteButton);
 }
 
