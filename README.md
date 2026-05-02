@@ -5,7 +5,7 @@ Plataforma: Udemy
 
 ## Informações
 
-Algumas das pastas de aulas estão vazias pois não foi preciso criar arquivos dentro delas, já que as aulas foram simples ou apenas revisões. Eu deixei as pastas, mesmo que vazias, apenas para padronizar a contabilidade das aulas.
+Algumas das pastas de aulas estão faltando pois não foi preciso criar arquivos dentro delas, já que as aulas foram simples ou apenas revisões.
 
 ### Estilos quebrados
 
