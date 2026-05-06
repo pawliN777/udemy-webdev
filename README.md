@@ -9,4 +9,4 @@ Algumas das pastas de aulas estão faltando pois não foi preciso criar arquivos
 
 ### Estilos quebrados
 
-Fiz um refactor no meu arquivo de estilo, então muitas aulas quebraram, atualizei apenas a aula 48, no arquivo newIndex para o novo padrão. 
+Fiz um refactor no pipastyle, então muitas aulas quebraram, mas já atualizei as versões novas dos códigos das aulas principais (IMC, Timer e TaskList).
