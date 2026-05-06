@@ -1,12 +1,38 @@
+
 # Curso de Desenvolvimento Web
 
-Professor: Luiz Otávio
-Plataforma: Udemy
+- **Professor:** *Luiz Otávio*
+- **Plataforma:** *Udemy*
+
+## Capturas de tela
+
+#### Aula 26 - Calculadora de IMC
+
+<p align="center">
+    <img src="img\imc-calc-light.png" width="45%">
+    <img src="img\imc-calc-dark.png" width="45%">
+</p>
+
+#### Aula 47 - Cronômetro
+
+<p align="center">
+    <img src="img\timer-light.png" width="45%">
+    <img src="img\timer-dark.png" width="45%">
+</p>
+
+#### Aula 48 - Lista de Tarefas
+
+<p align="center">
+    <img src="img\tasklist-light.png" width="45%">
+    <img src="img\tasklist-dark.png" width="45%">
+</p>
 
 ## Informações
 
-Algumas das pastas de aulas estão faltando pois não foi preciso criar arquivos dentro delas, já que as aulas foram simples ou apenas revisões.
+### Pastas ausentes
+
+- Algumas das pastas de aulas estão faltando pois não foi preciso criar arquivos dentro delas, já que as aulas foram simples ou apenas revisões.
 
 ### Estilos quebrados
 
-Fiz um refactor no pipastyle, então muitas aulas quebraram, mas já atualizei as versões novas dos códigos das aulas principais (IMC, Timer e TaskList).
+- Fiz um refactor no pipastyle, então muitas aulas quebraram, mas já atualizei as versões novas dos códigos das aulas principais (IMC, Timer e TaskList).
