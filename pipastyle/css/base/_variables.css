@@ -64,9 +64,9 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
-  --transition-fast: 150ms ease-in-out;
-  --transition-normal: 300ms ease-in-out;
-  --transition-slow: 500ms ease-in-out;
+  --transition-fast: 100ms ease-in-out;
+  --transition-normal: 200ms ease-in-out;
+  --transition-slow: 300ms ease-in-out;
 
   --z-0: 0;
   --z-10: 10;
@@ -93,6 +93,8 @@
     --color-gray-900: #fafafa;
 
     --color-primary-500: #60a5fa;
+
+    --btn-hover-brightness: 1.5;
 }
 
 :root[data-theme="light"] {
@@ -113,6 +115,8 @@
     --color-primary-100: #dbeafe;
     --color-primary-500: #3b82f6;
     --color-primary-900: #1e3a8a;
+
+    --btn-hover-brightness: 0.85;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -132,5 +136,7 @@
     --color-gray-900: #fafafa;
 
     --color-primary-500: #60a5fa;
+
+    --btn-hover-brightness: 1.5;
   }
 }

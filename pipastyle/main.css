@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-@import url(./base/_reset.css);
-@import url(./base/_variables.css);
+@import url(./css/base/_reset.css);
+@import url(./css/base/_variables.css);
+@import url(./css/base/icons.css);
 
-@import url(./layout/_containers.css);
+@import url(./css/layout/_containers.css);
 
-@import url(./components/_buttons.css);
-@import url(./components/_forms.css);
-@import url(./components/_cards.css);
+@import url(./css/components/_buttons.css);
+@import url(./css/components/_forms.css);
+@import url(./css/components/_cards.css);
+@import url(./css/components/_displays.css);
 
-@import url(./animations/_transitions.css);
+@import url(./css/animations/_transitions.css);
 
-@import url(./utilities/_helpers.css);
-@import url(./utilities/_spacing.css);
-@import url(./utilities/_typography.css);
-@import url(./utilities/_colors.css);
-@import url(./utilities/_borders.css);
-@import url(./utilities/_sizing.css);
+@import url(./css/utilities/_helpers.css);
+@import url(./css/utilities/_spacing.css);
+@import url(./css/utilities/_typography.css);
+@import url(./css/utilities/_colors.css);
+@import url(./css/utilities/_borders.css);
+@import url(./css/utilities/_sizing.css);
