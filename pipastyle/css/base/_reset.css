@@ -21,6 +21,11 @@ body {
   background-color: var(--color-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "calt" 0, "liga" 0, "dlig" 0;
+}
+
+code, pre {
+  font-family: var(--font-mono);
 }
 
 ul,

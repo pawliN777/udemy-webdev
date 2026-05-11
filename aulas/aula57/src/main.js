@@ -1,3 +1,11 @@
+import { toggleTheme } from './theme.js';
+  
+const btn = document.querySelector('#theme-toggle');
+    
+if (btn) {
+    btn.addEventListener('click', toggleTheme);
+}
+
 const display = document.querySelector('#display');
 
 let input = [];
@@ -19,7 +27,6 @@ function unformat(param) {
 }
 
 function calculate(param) {
-
     try {
         const expression = format(param);
         const calc = new Function('return ' + expression);
@@ -60,7 +67,7 @@ document.addEventListener('click', function(e) {
     if (el.id === 'btn-equal') {
         const result = calculate(input);
 
-        if (result === 'Infinity' || result === 'NaN' || result === 'undefined') {
+        if (result === 'Infinity' || isNaN(result) || result === 'undefined') {
             return showOnDisplay('Inválido');
         } else {
             return showOnDisplay(result);
