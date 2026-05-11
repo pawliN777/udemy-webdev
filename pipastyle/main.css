@@ -1,6 +1,6 @@
 @import url(./css/base/_reset.css);
 @import url(./css/base/_variables.css);
-@import url(./css/base/icons.css);
+@import url(./css/base/_icons.css);
 
 @import url(./css/layout/_containers.css);
 
