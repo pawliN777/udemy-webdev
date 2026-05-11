@@ -42,4 +42,4 @@
 
 ### Estilos quebrados
 
-- Fiz um refactor no pipastyle, então muitas aulas quebraram, mas já atualizei as versões novas dos códigos das aulas principais (IMC, Timer e TaskList).
+- Fiz um refactor no pipastyle, então muitas aulas quebraram, mas já atualizei as versões novas dos códigos das aulas principais (aula26, aula47 e aula48).
