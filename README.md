@@ -27,6 +27,13 @@
     <img src="img\tasklist-dark.png" width="45%">
 </p>
 
+#### Aula 57 - Calculadora
+
+<p align="center">
+    <img src="img\calculator-light.png" width="45%">
+    <img src="img\calculator-dark.png" width="45%">
+</p>
+
 ## Informações
 
 ### Pastas ausentes
