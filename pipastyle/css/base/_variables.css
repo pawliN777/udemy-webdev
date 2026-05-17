@@ -111,7 +111,9 @@
     --color-gray-800: #e4e4e7;
     --color-gray-900: #fafafa;
 
+    --color-primary-100: #2b4769;
     --color-primary-500: #60a5fa;
+    --color-primary-900: #bfdcff;
 
     --btn-hover-brightness: 1.5;
 }

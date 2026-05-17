@@ -1,35 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../pipastyle/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../pipastyle/main.css" />
     <title>Aula 48 - Lista de Tarefas Nova</title>
-</head>
-<body class="bg-gray-200">
-    <main class="min-h-screen d-flex justify-content-center align-items-center flex-column">
-        <div class="card shadow-lg p-2 mb-5 rounded-full">
-            <button
-                id="theme-toggle" 
-                class="btn btn-secondary square-md btn-icon-circle rounded-full">
-                <i class="icon-sun-moon text-2xl"></i>
+  </head>
+  <body class="bg-gray-200">
+    <main
+      class="min-h-screen d-flex justify-content-center align-items-center flex-column"
+    >
+      <div class="card shadow-lg p-2 mb-5 rounded-full">
+        <button
+          id="theme-toggle"
+          class="btn btn-secondary square-md btn-icon-circle rounded-full"
+        >
+          <i class="icon-sun-moon text-2xl"></i>
+        </button>
+      </div>
+      <section class="card d-flex gap-2 w-50">
+        <header class="card-header bg-white">
+          <h1 class="card-title text-center text-primary text-3xl">
+            Lista de Tarefas
+          </h1>
+        </header>
+        <div class="card-body">
+          <div class="form-group d-flex gap-2">
+            <input
+              id="task-input"
+              type="text"
+              class="form-control"
+              placeholder="Ex.: Ir ao mercado às 10h"
+            />
+            <button id="task-button" class="btn btn-primary btn-md w-25">
+              <i class="icon-circle-plus text-lg mr-1"></i>
+              Adicionar
             </button>
+          </div>
+          <ul id="task-list" class="d-flex flex-column gap-2"></ul>
         </div>
-        <section class="card d-flex gap-2 w-50">
-            <header class="card-header bg-white">
-                <h1 class="card-title text-center text-primary text-3xl">Lista de Tarefas</h1>
-            </header>
-            <div class="card-body">
-                <div class="form-group">
-                    <input id="task-input" type="text" class="form-control" placeholder="Ex.: Ir ao mercado às 10h">
-                </div>
-                <div class="form-group text-right">
-                    <button id="task-button" class="btn btn-primary btn-md w-100">Adicionar</button>
-                </div>
-                <ul id="task-list" class="d-flex flex-column gap-2"></ul>
-            </div>
-        </section>
+      </section>
     </main>
     <script type="module" src="./newJS/newMain.js"></script>
-</body>
+  </body>
 </html>

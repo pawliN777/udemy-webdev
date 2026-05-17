@@ -16,6 +16,12 @@ function createLi() {
     return li;
 }
 
+function createIcon(el) {
+    const icon = document.createElement('i');
+    icon.className = 'icon-trash-2 text-lg';
+    el.appendChild(icon);
+}
+
 function inputClear() {
     taskInput.value = '';
     taskInput.focus();
@@ -23,9 +29,11 @@ function inputClear() {
 
 function createDeleteButton(li) {
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Remover';
-    deleteButton.className = 'btn text-xs flex-shrink-0 text-danger';
+    deleteButton.id = 'btn-delete';
+    deleteButton.className = 'btn btn-sm btn-danger-ghost square-sm text-danger flex-shrink-0';
+    deleteButton.dataset.tooltip = 'Remover';
     li.appendChild(deleteButton);
+    createIcon(deleteButton);
 }
 
 function addTask(textInput) {
@@ -36,7 +44,7 @@ function addTask(textInput) {
     span.className = 'text-break flex-fill';
     
     li.appendChild(span); 
-    createDeleteButton(li); 
+    createDeleteButton(li);
     
     taskList.appendChild(li);
     inputClear();
@@ -63,7 +71,7 @@ taskButton.addEventListener('click', function() {
 document.addEventListener('click', function(e) {
     const el = e.target;
     
-    if (el.textContent === 'Remover') {
+    if (el.id === 'btn-delete') {
         el.parentElement.remove();
         saveTask();
     }
