@@ -1,74 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../pipastyle/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../pipastyle/main.css" />
     <title>Aula 26 - Calculadora de IMC</title>
-</head>
-<body class="bg-gray-200">
-    <main class="min-h-screen d-flex justify-content-center align-items-center flex-column">
-        <div class="card shadow-lg p-2 mb-5 rounded-full">
-            <button
-                id="theme-toggle" 
-                class="btn btn-secondary square-md btn-icon-circle rounded-full">
-                <i class="icon-sun-moon text-2xl"></i>
-            </button>
-        </div>
-        <section class="card shadow-lg p-2">
-            <header class="card-header bg-white mb-2">
-                <h1 class="card-title text-center text-primary text-3xl">Calculadora de IMC</h1>
-            </header>
-            <table class="text-center">
-                <thead class="text-2xl">
-                    <tr>
-                        <th scope="col">IMC</th>
-                        <th scope="col">Resultado</th>
-                    </tr>
-                </thead>
-                <tbody  class="text-sm">
-                    <tr>
-                        <td>Menor que 18,5</td>
-                        <td>Abaixo do peso</td>
-                    </tr>
-                    <tr>
-                        <td>Entre 18,5 e 24,9</td>
-                        <td>Peso normal</td>
-                    </tr>
-                    <tr>
-                        <td>Entre 25 e 29,9</td>
-                        <td>Sobrepeso</td>
-                    </tr>
-                    <tr>
-                        <td>Entre 30 e 34,9</td>
-                        <td>Obesidade grau 1</td>
-                    </tr>
-                    <tr>
-                        <td>Entre 35 e 39,9</td>
-                        <td>Obesidade grau 2</td>
-                    </tr>
-                    <tr>
-                        <td>Mais que 40</td>
-                        <td>Obesidade grau 3</td>
-                    </tr>
-                </tbody>
-            </table>
-            <form id="form-imc" class="card-body d-flex flex-column gap-2">
-                <label for="input-weight">Peso (em kg)</label>
-                <input type="number" step="0.01" inputmode="decimal" id="input-weight" class="form-control mb-2" placeholder="Ex 80">
-                <label for="input-height">Altura (em metros)</label>
-                <input type="number" step="0.01" inputmode="decimal" id="input-height" class="form-control mb-2" placeholder="Ex 1.80">
-                <div role="alert" id="input-error" class="text-center text-danger font-bold text-sm mb-2 d-none"></div>
-                <button type="submit" class="btn btn-primary btn-md w-100">Enviar</button>
-            </form>
-        </section>
-        <section id="show-section" class="card my-5 shadow-lg d-none">
-            <header class="card-header bg-white p-2">
-                <h2 class="text-center text-primary">Resultado</h2>
-            </header>          
-            <div id="show-result" class="p-4"></div>
-        </section>
+  </head>
+  <body class="bg-gray-200">
+    <main
+      class="min-h-screen d-flex justify-content-center align-items-center flex-column"
+    >
+      <div class="card shadow-lg p-2 mb-5 rounded-full">
+        <button
+          id="theme-toggle"
+          class="btn btn-secondary square-md btn-icon-circle rounded-full"
+        >
+          <i class="icon-sun-moon text-2xl"></i>
+        </button>
+      </div>
+      <section class="card shadow-lg">
+        <header class="card-header">
+          <h1 class="card-title text-center text-primary text-3xl">
+            Calculadora de IMC
+          </h1>
+        </header>
+        <table class="text-center">
+          <thead class="text-2xl">
+            <tr>
+              <th scope="col">IMC</th>
+              <th scope="col">Resultado</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr>
+              <td>Menor que 18,5</td>
+              <td>Abaixo do peso</td>
+            </tr>
+            <tr>
+              <td>Entre 18,5 e 24,9</td>
+              <td>Peso normal</td>
+            </tr>
+            <tr>
+              <td>Entre 25 e 29,9</td>
+              <td>Sobrepeso</td>
+            </tr>
+            <tr>
+              <td>Entre 30 e 34,9</td>
+              <td>Obesidade grau 1</td>
+            </tr>
+            <tr>
+              <td>Entre 35 e 39,9</td>
+              <td>Obesidade grau 2</td>
+            </tr>
+            <tr>
+              <td>Mais que 40</td>
+              <td>Obesidade grau 3</td>
+            </tr>
+          </tbody>
+        </table>
+        <form id="form-imc" class="card-body d-flex flex-column gap-2">
+          <label for="input-weight">Peso (em kg)</label>
+          <input
+            type="number"
+            step="0.01"
+            inputmode="decimal"
+            id="input-weight"
+            class="form-control mb-2"
+            placeholder="Ex 80"
+          />
+          <label for="input-height">Altura (em metros)</label>
+          <input
+            type="number"
+            step="0.01"
+            inputmode="decimal"
+            id="input-height"
+            class="form-control mb-2"
+            placeholder="Ex 1.80"
+          />
+          <div
+            role="alert"
+            id="input-error"
+            class="text-center text-danger font-bold text-sm mb-2 d-none"
+          ></div>
+          <button type="submit" class="btn btn-primary btn-md w-100">
+            Enviar
+          </button>
+        </form>
+      </section>
+      <section id="show-section" class="card my-5 shadow-lg d-none">
+        <header class="card-header bg-white p-2">
+          <h2 class="text-center text-primary">Resultado</h2>
+        </header>
+        <div id="show-result" class="p-4"></div>
+      </section>
     </main>
     <script type="module" src="./js/main.js"></script>
-</body>
+  </body>
 </html>
