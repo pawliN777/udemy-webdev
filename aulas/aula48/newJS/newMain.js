@@ -12,13 +12,13 @@ const taskList = document.querySelector('#task-list');
 
 function createLi() {
     const li = document.createElement('li');
-    li.className = 'bg-gray-200 d-flex justify-content-between align-items-center p-4 rounded-md overflow-hidden';
+    li.className = 'bg-gray-100 d-flex justify-content-between align-items-center p-4 rounded-md overflow-hidden';
     return li;
 }
 
 function createIcon(el) {
     const icon = document.createElement('i');
-    icon.className = 'icon-trash-2 text-lg';
+    icon.className = 'icon icon-trash-2 text-lg';
     el.appendChild(icon);
 }
 

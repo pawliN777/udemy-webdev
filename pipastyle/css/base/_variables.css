@@ -20,23 +20,19 @@
 }
 
 :root {
-  --color-white: #ffffff;
-  --color-black: #09090b;
-
-  --color-gray-50: #fafafa;
-  --color-gray-100: #f4f4f5;
-  --color-gray-200: #e4e4e7;
-  --color-gray-300: #d4d4d8;
-  --color-gray-400: #a1a1aa;
-  --color-gray-500: #71717a;
-  --color-gray-600: #52525b;
-  --color-gray-700: #3f3f46;
-  --color-gray-800: #27272a;
-  --color-gray-900: #18181b;
-
-  --color-primary-100: #dbeafe;
-  --color-primary-500: #3b82f6;
-  --color-primary-900: #1e3a8a;
+  --rgb-0: rgb(0, 0, 0);
+  --rgb-10: rgb(10, 10, 10);
+  --rgb-25: rgb(25, 25, 25);
+  --rgb-50: rgb(50, 50, 50);
+  --rgb-75: rgb(75, 75, 75);
+  --rgb-100: rgb(100, 100, 100);
+  --rgb-125: rgb(125, 125, 125);
+  --rgb-150: rgb(150, 150, 150);
+  --rgb-175: rgb(175, 175, 175);
+  --rgb-200: rgb(200, 200, 200);
+  --rgb-225: rgb(225, 225, 225);
+  --rgb-240: rgb(240, 240, 240);
+  --rgb-255: rgb(255, 255, 255);
 
   --color-success: #22c55e;
   --color-danger: #ef4444;
@@ -101,46 +97,52 @@
 }
 
 :root[data-theme='dark'] {
-  --color-white: #000000;
-  --color-black: #ffffff;
+  --bg-pure: var(--rgb-0);
+  --text-pure: var(--rgb-255);
+  
+  --color-white: var(--rgb-255);
+  --color-black: var(--rgb-0);
 
-  --color-gray-50: #09090b;
-  --color-gray-100: #18181b;
-  --color-gray-200: #27272a;
-  --color-gray-300: #3f3f46;
-  --color-gray-400: #52525b;
-  --color-gray-500: #71717a;
-  --color-gray-600: #a1a1aa;
-  --color-gray-700: #d4d4d8;
-  --color-gray-800: #e4e4e7;
-  --color-gray-900: #fafafa;
+  --color-gray-50: var(--rgb-10);
+  --color-gray-100: var(--rgb-25);
+  --color-gray-200: var(--rgb-50);
+  --color-gray-300: var(--rgb-75);
+  --color-gray-400: var(--rgb-100);
+  --color-gray-500: var(--rgb-125);
+  --color-gray-600: var(--rgb-150);
+  --color-gray-700: var(--rgb-175);
+  --color-gray-800: var(--rgb-200);
+  --color-gray-900: var(--rgb-225);
 
-  --color-primary-100: #2b4769;
-  --color-primary-500: #60a5fa;
-  --color-primary-900: #bfdcff;
+  --color-primary-100: rgb(150, 180, 245);
+  --color-primary-500: rgb(60, 130, 245);
+  --color-primary-900: rgb(25, 50, 90);
 
   --btn-shadow-hover: inset 0 0 0 100vh rgba(255, 255, 255, 0.25);
   --btn-shadow-active: inset 0 0 0 100vh rgba(255, 255, 255, 0.5);
 }
 
 :root[data-theme='light'] {
-  --color-white: #ffffff;
-  --color-black: #000000;
+  --bg-pure: var(--rgb-255);
+  --text-pure: var(--rgb-0);
+  
+  --color-white: var(--rgb-255);
+  --color-black: var(--rgb-0);
 
-  --color-gray-50: #fafafa;
-  --color-gray-100: #f4f4f5;
-  --color-gray-200: #e4e4e7;
-  --color-gray-300: #d4d4d8;
-  --color-gray-400: #a1a1aa;
-  --color-gray-500: #71717a;
-  --color-gray-600: #52525b;
-  --color-gray-700: #3f3f46;
-  --color-gray-800: #27272a;
-  --color-gray-900: #18181b;
+  --color-gray-50: var(--rgb-240);
+  --color-gray-100: var(--rgb-225);
+  --color-gray-200: var(--rgb-200);
+  --color-gray-300: var(--rgb-175);
+  --color-gray-400: var(--rgb-150);
+  --color-gray-500: var(--rgb-125);
+  --color-gray-600: var(--rgb-100);
+  --color-gray-700: var(--rgb-75);
+  --color-gray-800: var(--rgb-50);
+  --color-gray-900: var(--rgb-25);
 
-  --color-primary-100: #dbeafe;
-  --color-primary-500: #3b82f6;
-  --color-primary-900: #1e3a8a;
+  --color-primary-100: rgb(150, 180, 245);
+  --color-primary-500: rgb(60, 130, 245);
+  --color-primary-900: rgb(25, 50, 90);
 
   --btn-shadow-hover: inset 0 0 0 100vh rgba(0, 0, 0, 0.2);
   --btn-shadow-active: inset 0 0 0 100vh rgba(0, 0, 0, 0.35);
