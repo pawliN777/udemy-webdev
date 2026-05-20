@@ -56,6 +56,8 @@ select {
   color: inherit;
   border: none;
   background: transparent;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 input:focus:not(:focus-visible),

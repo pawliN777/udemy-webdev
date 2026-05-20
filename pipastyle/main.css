@@ -9,13 +9,11 @@
 @import url(./css/components/_cards.css);
 @import url(./css/components/_displays.css);
 
-@import url(./css/animations/_transitions.css);
-
 @import url(./css/accessibility/_title.css);
 
 @import url(./css/utilities/_helpers.css);
 @import url(./css/utilities/_spacing.css);
 @import url(./css/utilities/_typography.css);
-@import url(./css/utilities/_colors.css);
 @import url(./css/utilities/_borders.css);
 @import url(./css/utilities/_sizing.css);
+@import url(./css/utilities/_colors.css);
