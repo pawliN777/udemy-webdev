@@ -12,7 +12,7 @@ const taskList = document.querySelector('#task-list');
 
 function createLi() {
     const li = document.createElement('li');
-    li.className = 'bg-gray-100 d-flex justify-content-between align-items-center p-4 rounded-md overflow-hidden';
+    li.className = 'bg-gray-100 d-flex justify-content-between align-items-center p-4 rounded-md';
     return li;
 }
 
