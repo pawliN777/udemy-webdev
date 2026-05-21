@@ -1,4 +1,4 @@
-import { toggleTheme } from './js/theme.js';
+import { toggleTheme } from './theme.js';
   
 const btn = document.querySelector('#theme-toggle');
     
@@ -12,7 +12,7 @@ if (btn) {
     <button
         id="theme-toggle" 
         class="btn btn-secondary square-md btn-icon-circle rounded-full">
-        <i class="icon-sun-moon text-2xl"></i>
+        <i class="icon icon-sun-moon text-2xl"></i>
      </button>
 </div> 
 
