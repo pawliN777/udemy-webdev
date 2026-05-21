@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br" data-theme="light">
+<html lang="pt-br" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,12 +7,20 @@
     <title>Aula 59 - Calculadora 2.0</title>
   </head>
   <body class="bg-gray-100">
-    <main class="min-h-screen d-flex justify-content-center align-items-center">
+    <main class="min-h-screen d-flex justify-content-center align-items-center flex-column">
+      <div class="card shadow-lg p-2 mb-5 rounded-full">
+        <button
+          id="theme-toggle"
+          class="btn btn-secondary square-md btn-icon-circle rounded-full"
+        >
+          <i class="icon icon-sun-moon text-2xl"></i>
+        </button>
+      </div>
       <section
         class="card w-size-25 d-flex flex-column justify-content-center align-items-center text-align-center shadow-lg rounded-2xl"
       >
         <div data-card class="container pb-4">
-          <header class="card-header mb-4 p-2">
+          <header class="card-header mb-4">
             <h1 class="card-title text-3xl text-primary text-center">
               Calculadora
             </h1>

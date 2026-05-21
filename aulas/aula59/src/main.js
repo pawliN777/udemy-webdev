@@ -1,5 +1,12 @@
 import { Calculator } from './Calculator.js';
 import { mouseController, keyboardController } from './controller.js';
+import { toggleTheme } from './theme.js';
+  
+const btn = document.querySelector('#theme-toggle');
+    
+if (btn) {
+    btn.addEventListener('click', toggleTheme);
+}
 
 const card = document.querySelector('[data-card]');
 const display = card.querySelector('[data-display]');

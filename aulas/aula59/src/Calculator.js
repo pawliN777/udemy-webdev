@@ -4,17 +4,17 @@ export class Calculator {
   }
 
   number(digit) {
-    if (this.display.value === '0' || this.display.value === 'Inválido') {
-      if (isNaN(digit) && this.display.value !== 'Inválido') {
-        this.display.value += digit;
-        this.display.scrollLeft = this.display.scrollWidth;
-      } else {
-        this.display.value = digit;
-      }
+    if (this.display.value === 'Inválido') {
+      this.display.value = '0';
+    }
+
+    if (this.display.value === '0' && !isNaN(digit)) {
+      this.display.value = digit;
     } else {
       this.display.value += digit;
-      this.display.scrollLeft = this.display.scrollWidth;
     }
+
+    this.display.scrollLeft = this.display.scrollWidth;
   }
 
   clear() {
@@ -22,20 +22,12 @@ export class Calculator {
   }
 
   backspace() {
-    if (
-      this.display.value === '' ||
-      this.display.value === 'Inválido' ||
-      this.display.value === '0'
-    ) {
+    const val = this.display.value;
+
+    if (val === 'Inválido' || val.length <= 1) {
       this.display.value = '0';
-      return;
     } else {
-      if (this.display.value.length > 1) {
-        this.display.value = this.display.value.slice(0, -1);
-      } else {
-        this.display.value = '0';
-        return;
-      }
+      this.display.value = val.slice(0, -1);
     }
   }
 
@@ -46,7 +38,6 @@ export class Calculator {
 
       if (!isValidExpression) {
         this.display.value = 'Inválido';
-        return;
       }
 
       const calculation = new Function('return ' + expression);
@@ -54,14 +45,11 @@ export class Calculator {
 
       if (isNaN(result) || !isFinite(result)) {
         this.display.value = 'Inválido';
-        return;
       } else {
         this.display.value = result;
-        return;
       }
     } catch (e) {
       this.display.value = 'Inválido';
-      return;
     }
   }
 }
