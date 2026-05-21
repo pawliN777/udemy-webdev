@@ -12,12 +12,12 @@
   z-index: var(--z-50);
   pointer-events: none;
   
-  background-color: var(--color-gray-900);
-  color: var(--color-gray-50);
-  box-shadow: var(--shadow-md);
+  background-color: var(--rgb-100);
+  color: var(--color-white);
+  box-shadow: var(--shadow-lg);
   
   padding: var(--space-1) var(--space-2);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-full);
   font-size: var(--text-xs);
   white-space: nowrap;
   
