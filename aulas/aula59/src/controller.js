@@ -21,7 +21,7 @@ export function mouseController(e, calculator) {
 }
 
 export function keyboardController(e, calculator) {
-  const digits = [
+  const keys = [
     '(',
     ')',
     '1',
@@ -43,7 +43,7 @@ export function keyboardController(e, calculator) {
     'Delete',
   ];
 
-  if (digits.includes(e.key)) {
+  if (keys.includes(e.key)) {
     calculator.display.focus();
     if (e.key === 'Backspace') {
       e.preventDefault();
