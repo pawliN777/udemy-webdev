@@ -14,7 +14,7 @@
     border-color var(--transition-fast);
   cursor: pointer;
   user-select: none;
-  -webkit-tap-highlight-color: transparent; /* Garante que o quadrado azul nativo também suma */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn:disabled {
@@ -146,7 +146,6 @@
   color: var(--color-danger);
 }
 
-/* Protegido contra telas de toque */
 @media (hover: hover) and (pointer: fine) {
   .btn-danger-ghost:hover:not(:disabled) {
     background-color: color-mix(in srgb, var(--color-danger) 15%, transparent);
