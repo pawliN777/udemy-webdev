@@ -58,6 +58,7 @@ select {
   background: transparent;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 input:focus:not(:focus-visible),
