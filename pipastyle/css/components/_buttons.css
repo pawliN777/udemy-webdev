@@ -61,7 +61,7 @@
 }
 
 .btn-secondary {
-  background: var(--color-gray-200);
+  background: var(--bg-btn-secondary);
   color: var(--color-gray-900);
 }
 
