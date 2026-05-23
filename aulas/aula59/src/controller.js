@@ -60,3 +60,8 @@ export function keyboardController(e, calculator) {
     e.preventDefault();
   }
 }
+
+export const inputController = (e) => {
+  const el = e.target;
+  el.value = el.value.replace(/[^0-9+\-*/()]/g, '');
+}

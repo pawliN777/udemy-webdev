@@ -1,5 +1,5 @@
 import { Calculator } from './Calculator.js';
-import { mouseController, keyboardController } from './controller.js';
+import { mouseController, keyboardController, inputController } from './controller.js';
 import { toggleTheme } from './theme.js';
   
 const btn = document.querySelector('#theme-toggle');
@@ -22,4 +22,8 @@ card.addEventListener('click', (e) => {
 
 document.addEventListener('keydown', (e) => {
   keyboardController(e, calculator);
+});
+
+display.addEventListener('input', (e) => {
+  inputController(e);
 });
