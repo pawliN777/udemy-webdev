@@ -34,6 +34,13 @@
     <img src="img\calculator-dark.png" width="45%">
 </p>
 
+#### Aula 59 - Calculadora 2.0
+
+<p align="center">
+    <img src="img\calculator2-light.png" width="45%">
+    <img src="img\calculator2-dark.png" width="45%">
+</p>
+
 ## Informações
 
 ### Pastas ausentes
