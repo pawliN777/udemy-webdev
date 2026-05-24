@@ -117,8 +117,10 @@
   --color-gray-800: var(--rgb-200);
   --color-gray-900: var(--rgb-225);
 
-  --color-primary-100: rgb(150, 180, 245);
+  --color-primary-100: rgb(150, 180, 255);
+  --color-primary-300: rgb(100, 165, 255);
   --color-primary-500: rgb(60, 130, 245);
+  --color-primary-700: rgb(45, 100, 185);
   --color-primary-900: rgb(25, 50, 90);
 
   --btn-shadow-hover: inset 0 0 0 100vh rgba(255, 255, 255, 0.15);
@@ -146,8 +148,10 @@
   --color-gray-800: var(--rgb-50);
   --color-gray-900: var(--rgb-25);
 
-  --color-primary-100: rgb(150, 180, 245);
+  --color-primary-100: rgb(150, 180, 255);
+  --color-primary-300: rgb(100, 165, 255);
   --color-primary-500: rgb(60, 130, 245);
+  --color-primary-700: rgb(45, 100, 185);
   --color-primary-900: rgb(25, 50, 90);
 
   --btn-shadow-hover: inset 0 0 0 100vh rgba(0, 0, 0, 0.15);
