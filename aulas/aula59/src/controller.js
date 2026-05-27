@@ -1,4 +1,4 @@
-export function mouseController(e, calculator) {
+export const mouseController = (e, calculator) => {
   const el = e.target.closest('button');
 
   if (!el) return;
@@ -20,7 +20,7 @@ export function mouseController(e, calculator) {
   }
 }
 
-export function keyboardController(e, calculator) {
+export const keyboardController = (e, calculator) => {
   const keys = [
     '(',
     ')',
