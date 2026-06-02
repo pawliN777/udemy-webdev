@@ -46,7 +46,7 @@ export class Calculator {
       if (isNaN(result) || !isFinite(result)) {
         this.display.value = 'Inválido';
       } else {
-        this.display.value = result;
+        this.display.value = result.toFixed(2);
       }
     } catch (e) {
       this.display.value = 'Inválido';
