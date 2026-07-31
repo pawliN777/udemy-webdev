@@ -47,6 +47,7 @@
 .btn-md {
   padding: var(--space-2) var(--space-4);
   font-size: var(--text-sm);
+  border-radius: var(--radius-md);
 }
 
 .btn-lg {
