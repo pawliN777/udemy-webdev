@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../pipastyle/main.css" />
+    <title>Aula 85 - Formulário</title>
+  </head>
+  <body>
+    <main class="container center-screen">
+      <section class="card w-size-25">
+        <header class="card-title text-primary text-4xl">Formulário</header>
+        <div class="card-body text-sm text-gray-500">
+          <div class="text-center mb-5">
+            <ul>
+              <li>Os campos não podem estar vazios</li>
+              <li>O CPF precisa ser válido</li>
+              <li>O usuário só pode conter letras ou números</li>
+              <li>O usuário deve conter entre 3 e 12 caracteres</li>
+              <li>A senha precisa ter entre 6 e 12 caracteres</li>
+            </ul>
+          </div>
+          <form
+            id="form-field"
+            class="d-flex flex-column gap-3"
+          >
+            <input
+              id="form-name"
+              class="form-control"
+              type="text"
+              placeholder="Nome"
+            />
+            <input
+              id="form-lastname"
+              class="form-control"
+              type="text"
+              placeholder="Sobrenome"
+            />
+            <input
+              id="form-cpf"
+              class="form-control"
+              type="text"
+              placeholder="CPF"
+            />
+            <input
+              id="form-user"
+              class="form-control"
+              type="text"
+              placeholder="Usuário"
+            />
+            <input
+              id="form-password"
+              class="form-control"
+              type="password"
+              placeholder="Senha"
+            />
+            <input
+              id="form-password-again"
+              class="form-control"
+              type="password"
+              placeholder="Repetir senha"
+            />
+            <button
+              id="form-btn"
+              type="submit"
+              class="btn btn-md btn-primary mt-5"
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

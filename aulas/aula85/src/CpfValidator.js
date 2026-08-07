@@ -1,4 +1,4 @@
-class CpfValidator {
+export class CpfValidator {
   constructor(cpf) {
     Object.defineProperty(this, 'formatedCpf', {
       writable: false,
@@ -31,7 +31,6 @@ class CpfValidator {
 
     const digit = 11 - (total % 11);
     return digit <= 9 ? String(digit) : '0';
-    console.log(total);
   }
 
   valid() {
@@ -43,13 +42,4 @@ class CpfValidator {
 
     return this.newCpf === this.formatedCpf;
   }
-}
-
-let cpf = new CpfValidator('070.987.720-03');
-// cpf = new CPF('999.999.999-99');
-
-if (cpf.valid()) {
-  console.log('CPF válido');
-} else {
-  console.log('CPF inválido');
 }
