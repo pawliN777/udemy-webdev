@@ -34,11 +34,18 @@
     <img src="img\calculator-dark.png" width="45%">
 </p>
 
-#### Aula 59 - Calculadora 2.0
+#### Aula 59 - Calculadora 2
 
 <p align="center">
     <img src="img\calculator2-light.png" width="45%">
     <img src="img\calculator2-dark.png" width="45%">
+</p>
+
+#### Aula 85 - Formulário
+
+<p align="center">
+    <img src="img\form-light.png" width="45%">
+    <img src="img\form-dark.png" width="45%">
 </p>
 
 ## Informações
@@ -50,3 +57,5 @@
 ### Estilos quebrados
 
 - Fiz um refactor no pipastyle, então muitas aulas quebraram, mas já atualizei as versões novas dos códigos das aulas principais (aula26, aula47 e aula48).
+
+- Muitas aulas estarão com a estilização estranha e/ou inconsistente, mas isso é porque estou constantemente testando o meu mini framework pipastyle e procurando as melhores estilizações possíveis e, como as aulas compartilham o mesmo arquivo do mini framework, algumas acabam quebrando, pois a estrutura do html é antiga. O importante é que o código funciona.
