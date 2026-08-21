@@ -9,10 +9,12 @@
   <body>
     <main class="container center-screen">
       <section class="card w-size-25">
-        <header class="card-title text-primary text-4xl">Formulário</header>
-        <div class="card-body text-sm text-gray-500">
-          <div class="text-center mb-5">
-            <ul>
+        <header class="card-header" >
+          <h1 class="text-primary">Formulário</h1>
+        </header>
+        <div>
+          <div class="card-body">
+            <ul class="text-center text-sm text-gray-500">
               <li>Os campos não podem estar vazios</li>
               <li>O CPF precisa ser válido</li>
               <li>O usuário só pode conter letras ou números</li>
@@ -22,7 +24,7 @@
           </div>
           <form
             id="form-field"
-            class="d-flex flex-column gap-3"
+            class="card-body d-flex flex-column gap-3"
           >
             <input
               id="form-name"
