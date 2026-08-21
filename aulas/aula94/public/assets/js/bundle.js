@@ -1,0 +1,2 @@
+(()=>{"use strict";const e=(e,o)=>e*o;(e=>{var o=Object.getOwnPropertyDescriptor(e,"name");(!o||!o.writable&&o.configurable)&&Object.defineProperty(e,"name",{value:"default",configurable:!0})})(e),console.log("Saturno","Paulo","Brendhon",22),console.log(10);const o=new class{constructor(e,o){this.username=e,this.lastname=o}get fullName(){return`${this.username} ${this.lastname}`}}("Brendhon","de Oliveira");console.log(o.fullName),console.log(e(5,10))})();
+//# sourceMappingURL=bundle.js.map
