@@ -1,24 +1,14 @@
-html {
+body {
+  background-color: var(--color-bg-body);
   font-family: var(--font-sans);
-  font-size: var(--font-md);
   font-weight: var(--font-regular);
   line-height: var(--line-height-normal);
   color: var(--color-font);
-}
-
-body {
-  background-color: var(--color-gray-100);
-}
-
-div {
-  margin: 0;
-  padding: 0;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-bold);
-  margin: 0;
-  padding: 0;
 }
 
 h1 { font-size: var(--font-xxxl); }
@@ -27,11 +17,6 @@ h3 { font-size: var(--font-xl); }
 h4 { font-size: var(--font-lg); }
 h5 { font-size: var(--font-md); }
 h6 { font-size: var(--font-sm); }
-
-p {
-  margin: 0;
-  padding: 0;
-}
 
 strong {
   font-weight: var(--font-bold);
@@ -50,4 +35,10 @@ pre, code {
   font-family: var(--font-mono);
 }
 
+button {
+  font-weight: var(--font-medium);
+}
 
+input, textarea, select {
+  font-weight: var(--font-regular);
+}

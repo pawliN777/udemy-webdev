@@ -29,7 +29,7 @@
   --font-xxl: 2rem;
   --font-xxxl: 2.5rem;
 
-  --font-light: 200;
+  --font-light: 300;
   --font-regular: 400;
   --font-medium: 500;
   --font-bold: 800;
@@ -79,50 +79,19 @@
   --z-modal: 100;
 }
 
-:root[data-theme='dark'] {
+:root, [data-theme='light'] {
   --color-white: var(--rgb-255);
   --color-black: var(--rgb-0);
 
-  --color-card-bg: var(--rgb-50);
-  --color-card-outline: var(--rgb-75);
-  --color-card-fill: var(--rgb-75);
-
-  --color-bg-btn-secondary: var(--rgb-100);
-  --color-font-btn-secondary: var(--rgb-255);
-
-  --color-font: var(--rgb-240);
-
-  --color-gray-50: var(--rgb-10);
-  --color-gray-100: var(--rgb-25);
-  --color-gray-200: var(--rgb-50);
-  --color-gray-300: var(--rgb-75);
-  --color-gray-400: var(--rgb-100);
-  --color-gray-500: var(--rgb-125);
-  --color-gray-600: var(--rgb-150);
-  --color-gray-700: var(--rgb-175);
-  --color-gray-800: var(--rgb-200);
-  --color-gray-900: var(--rgb-225);
-
-  --color-primary-100: rgb(150, 180, 255);
-  --color-primary-300: rgb(100, 165, 255);
-  --color-primary-500: rgb(60, 130, 245);
-  --color-primary-700: rgb(45, 100, 185);
-  --color-primary-900: rgb(25, 50, 90);
-
-  --btn-shadow-hover: inset 0 0 0 100vh rgb(255 255 255 / 0.15);
-  --btn-shadow-active: inset 0 0 0 100vh rgb(255 255 255 / 0.25);
-}
-
-:root[data-theme='light'] {
-  
-  --color-white: var(--rgb-255);
-  --color-black: var(--rgb-0);
+  --color-bg-body: var(--rgb-240);
 
   --color-card-bg: var(--rgb-255);
   --color-card-outline: var(--rgb-200);
-  --color-card-fill: var(--rgb-240);
 
-  --color-bg-btn-secondary: var(--rgb-200);
+  --color-secondary: var(--rgb-240);
+  --color-secondary-transparent: rgb(0 0 0 / 0.2);
+  --color-secondary-transparent-2: rgb(0 0 0 / 0.08);
+
   --color-font-btn-secondary: var(--rgb-0);
 
   --color-font: var(--rgb-75);
@@ -138,12 +107,62 @@
   --color-gray-800: var(--rgb-50);
   --color-gray-900: var(--rgb-25);
 
-  --color-primary-100: rgb(150, 180, 255);
-  --color-primary-300: rgb(100, 165, 255);
-  --color-primary-500: rgb(60, 130, 245);
-  --color-primary-700: rgb(45, 100, 185);
-  --color-primary-900: rgb(35, 75, 130);
+  --color-primary-50: rgb(239 246 255);
+  --color-primary-100: rgb(219 234 254);
+  --color-primary-200: rgb(180 210 255);
+  --color-primary-300: rgb(140 185 255);
+  --color-primary-400: rgb(90 155 250);
+  --color-primary-500: rgb(37 99 235); 
+  --color-primary-600: rgb(29 78 216);
+  --color-primary-700: rgb(30 64 175);
+  --color-primary-800: rgb(30 58 138);
+  --color-primary-900: rgb(23 37 84);
+  --color-primary-950: rgb(15 23 42);
 
-  --btn-shadow-hover: inset 0 0 0 100vh rgba(0, 0, 0, 0.15);
-  --btn-shadow-active: inset 0 0 0 100vh rgba(0, 0, 0, 0.25);
+  --btn-shadow-hover: inset 0 0 0 100vh rgba(0, 0, 0, 0.1);
+  --btn-shadow-active: inset 0 0 0 100vh rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] {
+  --color-white: var(--rgb-255);
+  --color-black: var(--rgb-0);
+
+  --color-bg-body: var(--rgb-25);
+
+  --color-card-bg: var(--rgb-50);
+  --color-card-outline: var(--rgb-75);
+
+  --color-secondary: var(--rgb-75);
+  --color-secondary-transparent: rgb(255 255 255 / 0.25);
+  --color-secondary-transparent-2: rgb(255 255 255 / 0.1);
+
+  --color-font-btn-secondary: var(--rgb-255);
+
+  --color-font: var(--rgb-240);
+
+  --color-gray-50: var(--rgb-10);
+  --color-gray-100: var(--rgb-25);
+  --color-gray-200: var(--rgb-50);
+  --color-gray-300: var(--rgb-75);
+  --color-gray-400: var(--rgb-100);
+  --color-gray-500: var(--rgb-125);
+  --color-gray-600: var(--rgb-150);
+  --color-gray-700: var(--rgb-175);
+  --color-gray-800: var(--rgb-200);
+  --color-gray-900: var(--rgb-225);
+
+  --color-primary-50: rgb(239 246 255);
+  --color-primary-100: rgb(219 234 254);
+  --color-primary-200: rgb(180 210 255);
+  --color-primary-300: rgb(140 185 255);
+  --color-primary-400: rgb(90 155 250);
+  --color-primary-500: rgb(37 99 235); 
+  --color-primary-600: rgb(29 78 216);
+  --color-primary-700: rgb(30 64 175);
+  --color-primary-800: rgb(30 58 138);
+  --color-primary-900: rgb(23 37 84);
+  --color-primary-950: rgb(15 23 42);
+
+  --btn-shadow-hover: inset 0 0 0 100vh rgb(255 255 255 / 0.15);
+  --btn-shadow-active: inset 0 0 0 100vh rgb(255 255 255 / 0.25);
 }

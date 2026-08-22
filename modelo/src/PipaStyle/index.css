@@ -1,4 +1,4 @@
-@import url('./Styles/Core/sanitize.css');
+@import url('./Styles/Core/reset.css');
 @import url('./Styles/Core/fontfaces.css');
 @import url('./Styles/Core/variables.css');
 @import url('./Styles/Core/icons.css');
@@ -8,6 +8,7 @@
 
 @import url('./Styles/Components/cards.css');
 @import url('./Styles/Components/buttons.css');
+@import url('./Styles/Components/forms.css');
 
 @import url('./Styles/Utils/typography.css');
 @import url('./Styles/Utils/helpers.css');
