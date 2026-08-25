@@ -26,21 +26,21 @@
   padding-block: var(--space-1);
   padding-inline: var(--space-3);
   font-size: var(--font-sm);
-  border-radius: var(--radius-1);
+  border-radius: var(--radius-2);
 }
 
 .btn-md {
   padding-block: var(--space-2);
   padding-inline: var(--space-4);
   font-size: var(--font-md);
-  border-radius: var(--radius-2);
+  border-radius: var(--radius-3);
 }
 
 .btn-lg {
   padding-block: var(--space-3);
   padding-inline: var(--space-5);
   font-size: var(--font-lg);
-  border-radius: var(--radius-3);
+  border-radius: var(--radius-4);
 }
 
 .btn-primary {

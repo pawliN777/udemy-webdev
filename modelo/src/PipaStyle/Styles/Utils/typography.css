@@ -18,3 +18,7 @@
 .font-primary {
   color: var(--color-primary-500) !important;
 }
+
+.font-center {
+  text-align: center !important;
+}
