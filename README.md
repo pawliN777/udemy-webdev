@@ -48,6 +48,13 @@
     <img src="img\form-dark.png" width="45%">
 </p>
 
+#### Aula 95 - Gerador de CPF
+
+<p align="center">
+    <img src="img\cpf-gen-light.png" width="45%">
+    <img src="img\cpf-gen-dark.png" width="45%">
+</p>
+
 ## Informações
 
 ### Pastas ausentes
