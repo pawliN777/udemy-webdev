@@ -55,6 +55,13 @@
     <img src="img\cpf-gen-dark.png" width="45%">
 </p>
 
+#### Aula 96 - Gerador de Senhas
+
+<p align="center">
+    <img src="img\pass-gen-light.png" width="45%">
+    <img src="img\pass-gen-dark.png" width="45%">
+</p>
+
 ## Informações
 
 ### Pastas ausentes
