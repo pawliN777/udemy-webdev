@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-br" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Senhas</title>
+  </head>
+  <body>
+    <main class="container center-screen">
+      <section class="card w-size-30">
+        <header class="card-header">
+          <h1 class="font-primary">Gerador de senhas</h1>
+        </header>
+        <div class="card-fill">
+          <table class="w-100">
+            <tr>
+              <td class="font-start"><p>Tamanho</p></td>
+              <td class="font-end">
+                <input
+                  id="size"
+                  type="number"
+                  min="4"
+                  max="20"
+                  value="12"
+                  class="input input-sm w-size-5 ml-auto"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><p class="font-start">Maiúsculas</p></td>
+              <td class="font-end">
+                <input
+                  id="uppers"
+                  type="checkbox"
+                  class="checkbox checkbox-lg ml-auto"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><p class="font-start">Minúsculas</p></td>
+              <td class="font-end">
+                <input
+                  id="lowers"
+                  type="checkbox"
+                  class="checkbox checkbox-lg ml-auto"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><p class="font-start">Números</p></td>
+              <td class="font-end">
+                <input
+                  id="numbers"
+                  type="checkbox"
+                  class="checkbox checkbox-lg ml-auto"
+                  checked
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><p class="font-start">Símbolos</p></td>
+              <td class="font-end">
+                <input
+                  id="symbols"
+                  type="checkbox"
+                  class="checkbox checkbox-lg ml-auto"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <button id="generate-button" class="btn btn-md btn-primary">
+          Gerar senha
+        </button>
+        <h3 id="generated-password"></h3>
+      </section>
+    </main>
+    <script src="./assets/js/bundle.js"></script>
+  </body>
+</html>
