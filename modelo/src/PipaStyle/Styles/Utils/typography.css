@@ -22,3 +22,11 @@
 .font-center {
   text-align: center !important;
 }
+
+.font-start {
+  text-align: start !important;
+}
+
+.font-end {
+  text-align: end;
+}

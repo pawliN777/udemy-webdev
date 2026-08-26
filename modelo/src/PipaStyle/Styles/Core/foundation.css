@@ -42,3 +42,8 @@ button {
 input, textarea, select {
   font-weight: var(--font-regular);
 }
+
+table {
+  border-collapse: separate;
+  border-spacing: var(--space-2);
+}
