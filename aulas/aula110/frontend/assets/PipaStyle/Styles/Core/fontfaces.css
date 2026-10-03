@@ -1,0 +1,205 @@
+/* ==================== SANS ==================== */
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../../Fonts/Text/inter-300.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 300;
+  src: url('../../Fonts/Text/inter-300-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../Fonts/Text/inter-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../../Fonts/Text/inter-400-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../Fonts/Text/inter-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../../Fonts/Text/inter-500-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../Fonts/Text/inter-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../../Fonts/Text/inter-700-italic.woff2') format('woff2');
+}
+
+/* ==================== SERIF ==================== */
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Serif';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../../Fonts/Text/roboto-serif-300.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Serif';
+  font-style: italic;
+  font-weight: 300;
+  src: url('../../Fonts/Text/roboto-serif-300-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../Fonts/Text/roboto-serif-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../../Fonts/Text/roboto-serif-400-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Serif';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../Fonts/Text/roboto-serif-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Serif';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../../Fonts/Text/roboto-serif-500-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../Fonts/Text/roboto-serif-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Serif';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../../Fonts/Text/roboto-serif-700-italic.woff2') format('woff2');
+}
+
+/* ==================== MONO ==================== */
+
+@font-face {
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../../Fonts/Text/jetbrains-mono-300.woff2') format('woff2');
+  font-feature-settings: "calt" 0, "liga" 0;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 300;
+  src: url('../../Fonts/Text/jetbrains-mono-300-italic.woff2') format('woff2');
+  font-feature-settings: "calt" 0, "liga" 0;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../Fonts/Text/jetbrains-mono-400.woff2') format('woff2');
+  font-feature-settings: "calt" 0, "liga" 0;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../../Fonts/Text/jetbrains-mono-400-italic.woff2') format('woff2');
+  font-feature-settings: "calt" 0, "liga" 0;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../Fonts/Text/jetbrains-mono-500.woff2') format('woff2');
+  font-feature-settings: "calt" 0, "liga" 0;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../../Fonts/Text/jetbrains-mono-500-italic.woff2') format('woff2');
+  font-feature-settings: "calt" 0, "liga" 0;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../Fonts/Text/jetbrains-mono-700.woff2') format('woff2');
+  font-feature-settings: "calt" 0, "liga" 0;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../../Fonts/Text/jetbrains-mono-700-italic.woff2') format('woff2');
+  font-feature-settings: "calt" 0, "liga" 0;
+}
