@@ -1,2 +1,4 @@
 testes/
 node_modules/
+banco-de-dados.txt
+.env
