@@ -1,0 +1,168 @@
+:root {
+  --rgb-0: rgb(0 0 0);
+  --rgb-10: rgb(10 10 10);
+  --rgb-25: rgb(25 25 25);
+  --rgb-50: rgb(50 50 50);
+  --rgb-75: rgb(75 75 75);
+  --rgb-100: rgb(100 100 100);
+  --rgb-125: rgb(125 125 125);
+  --rgb-150: rgb(150 150 150);
+  --rgb-175: rgb(175 175 175);
+  --rgb-200: rgb(200 200 200);
+  --rgb-225: rgb(225 225 225);
+  --rgb-240: rgb(240 240 240);
+  --rgb-255: rgb(255 255 255);
+
+  --color-success: rgb(35 200 95);
+  --color-danger: rgb(240 70 70);
+  --color-warning: rgb(245 160 10);
+  --color-info: rgb(15 165 235);
+
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-serif: 'Roboto Serif', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+
+  --font-sm: 0.75rem;
+  --font-md: 1rem;
+  --font-lg: 1.25rem;
+  --font-xl: 1.5rem;
+  --font-xxl: 2rem;
+  --font-xxxl: 2.5rem;
+
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 800;
+
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-loose: 2;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  --radius-1: 0.25rem;
+  --radius-2: 0.5rem;
+  --radius-3: 0.75rem;
+  --radius-4: 1rem;
+  --radius-5: 1.25rem;
+  --radius-6: 1.5rem;
+  --radius-8: 2rem;
+  --radius-10: 2.5rem;
+  --radius-12: 3rem;
+  --radius-16: 4rem;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 0 0.75rem 0.1rem rgb(0 0 0 / 0.1);
+  --shadow-md: 0 0 0.75rem 0.2rem rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 0 0.75rem 0.4rem rgb(0 0 0 / 0.1);
+
+  --transition-fast: 50ms ease-in-out;
+  --transition-normal: 100ms ease-in-out;
+  --transition-slow: 200ms ease-in-out;
+
+  --z-0: 0;
+  --z-10: 10;
+  --z-20: 20;
+  --z-30: 30;
+  --z-40: 40;
+  --z-50: 50;
+  --z-modal: 100;
+}
+
+:root, [data-theme='light'] {
+  --color-white: var(--rgb-255);
+  --color-black: var(--rgb-0);
+
+  --color-bg-body: var(--rgb-240);
+
+  --color-card-bg: var(--rgb-255);
+  --color-card-outline: var(--rgb-200);
+
+  --color-secondary: var(--rgb-240);
+  --color-secondary-transparent: rgb(0 0 0 / 0.2);
+  --color-secondary-transparent-2: rgb(0 0 0 / 0.08);
+
+  --color-font-btn-secondary: var(--rgb-0);
+
+  --color-font: var(--rgb-75);
+
+  --color-gray-50: var(--rgb-240);
+  --color-gray-100: var(--rgb-225);
+  --color-gray-200: var(--rgb-200);
+  --color-gray-300: var(--rgb-175);
+  --color-gray-400: var(--rgb-150);
+  --color-gray-500: var(--rgb-125);
+  --color-gray-600: var(--rgb-100);
+  --color-gray-700: var(--rgb-75);
+  --color-gray-800: var(--rgb-50);
+  --color-gray-900: var(--rgb-25);
+
+  --color-primary-50: rgb(239 246 255);
+  --color-primary-100: rgb(219 234 254);
+  --color-primary-200: rgb(180 210 255);
+  --color-primary-300: rgb(140 185 255);
+  --color-primary-400: rgb(90 155 250);
+  --color-primary-500: rgb(37 99 235); 
+  --color-primary-600: rgb(29 78 216);
+  --color-primary-700: rgb(30 64 175);
+  --color-primary-800: rgb(30 58 138);
+  --color-primary-900: rgb(23 37 84);
+  --color-primary-950: rgb(15 23 42);
+
+  --btn-shadow-hover: inset 0 0 0 100vh rgba(0, 0, 0, 0.1);
+  --btn-shadow-active: inset 0 0 0 100vh rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] {
+  --color-white: var(--rgb-255);
+  --color-black: var(--rgb-0);
+
+  --color-bg-body: var(--rgb-25);
+
+  --color-card-bg: var(--rgb-50);
+  --color-card-outline: var(--rgb-75);
+
+  --color-secondary: var(--rgb-75);
+  --color-secondary-transparent: rgb(255 255 255 / 0.25);
+  --color-secondary-transparent-2: rgb(255 255 255 / 0.1);
+
+  --color-font-btn-secondary: var(--rgb-255);
+
+  --color-font: var(--rgb-240);
+
+  --color-gray-50: var(--rgb-10);
+  --color-gray-100: var(--rgb-25);
+  --color-gray-200: var(--rgb-50);
+  --color-gray-300: var(--rgb-75);
+  --color-gray-400: var(--rgb-100);
+  --color-gray-500: var(--rgb-125);
+  --color-gray-600: var(--rgb-150);
+  --color-gray-700: var(--rgb-175);
+  --color-gray-800: var(--rgb-200);
+  --color-gray-900: var(--rgb-225);
+
+  --color-primary-50: rgb(239 246 255);
+  --color-primary-100: rgb(219 234 254);
+  --color-primary-200: rgb(180 210 255);
+  --color-primary-300: rgb(140 185 255);
+  --color-primary-400: rgb(90 155 250);
+  --color-primary-500: rgb(37 99 235); 
+  --color-primary-600: rgb(29 78 216);
+  --color-primary-700: rgb(30 64 175);
+  --color-primary-800: rgb(30 58 138);
+  --color-primary-900: rgb(23 37 84);
+  --color-primary-950: rgb(15 23 42);
+
+  --btn-shadow-hover: inset 0 0 0 100vh rgb(255 255 255 / 0.15);
+  --btn-shadow-active: inset 0 0 0 100vh rgb(255 255 255 / 0.25);
+}

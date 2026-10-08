@@ -1,0 +1,32 @@
+.font-light { 
+  font-weight: var(--font-light) !important; 
+}
+.font-regular { 
+  font-weight: var(--font-regular) !important; 
+}
+.font-medium { 
+  font-weight: var(--font-medium) !important; 
+}
+.font-bold { 
+  font-weight: var(--font-bold) !important; 
+}
+
+.font-sans { font-family: var(--font-sans) !important; }
+.font-serif { font-family: var(--font-serif) !important; }
+.font-mono { font-family: var(--font-mono) !important; }
+
+.font-primary {
+  color: var(--color-primary-500) !important;
+}
+
+.font-center {
+  text-align: center !important;
+}
+
+.font-start {
+  text-align: start !important;
+}
+
+.font-end {
+  text-align: end;
+}
