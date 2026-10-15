@@ -1,0 +1,15 @@
+<%- include('includes/head'); %>
+
+<main class="container center-screen">
+  <section class="w-size-35">
+    <form class="card" action="/" method="post">
+      <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h5>
+      <label>Cliente</label>
+      <input class="input input-md" type="text" name="cliente" />
+      <button class="btn btn-md btn-primary w-100">Enviar</button>
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    </form>
+  </section>
+</main>
+
+<%- include('includes/footer'); %>
