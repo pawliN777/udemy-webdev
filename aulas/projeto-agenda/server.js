@@ -10,7 +10,7 @@ mongoose
   .then(() => {
     app.emit('pronto');
   })
-  .catch((e) => console.log(e));
+  .catch((e) => { throw new Error('Erro ao conectar com o banco de dados', e); });
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
