@@ -15,7 +15,6 @@ export default defineConfig([
       quotes: ['error', 'single'],
       'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'no-undef': 'error',
-      'no-console': 'warn',
       eqeqeq: ['error', 'always'],
       indent: ['error', 2],
       'comma-dangle': ['error', 'always-multiline'],
