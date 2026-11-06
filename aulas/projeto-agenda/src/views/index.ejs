@@ -10,16 +10,39 @@
 
       <%- include('includes/messages') %>
 
-      <div class="responsive-table">
+      <% if (contatos.length > 0) { %>
+      <div class="text-center">
+        <a class="btn btn-lg btn-outline-primary mt-5" href="/contato/index"><i class="bi bi-plus-lg"></i> Adicionar</a>
+      </div>
+      <div class="responsive-table table-borderless text-center">
         <table class="table my-5">
-          <tr>
-            <td>Paulo</td>
-            <td>Saturno</td>
-            <td>99999-9999</td>
-            <td>paulosaturno@email.com</td>
-          </tr>
+          <th>NOME</th>
+          <th>SOBRENOME</th>
+          <th>EMAIL</th>
+          <th>TELEFONE</th>
+          <% contatos.forEach(contato => { %>
+            <tr class="border-bottom border-top">
+              <td><%= contato.nome %></td>
+              <td><%= contato.sobrenome %></td>
+              <td><%= contato.email %></td>
+              <td><%= contato.telefone %></td>
+              <td>
+                <a class="btn btn-sm btn-outline-primary" href="/contato/index/<%= contato._id %>"><i class="bi bi-pencil"></i></a>
+              </td>
+              <td>
+                <a class="btn btn-sm btn-outline-danger" href="/contato/delete/<%= contato._id %>"><i class="bi bi-trash"></i></a>
+              </td>
+            </tr>
+          <% }); %>
         </table>
       </div>
+      <% } else { %>
+        <div style="color: lightgray;" class="text-center mt-5">
+          <h1><i class="bi bi-x-lg"></i></h1>
+          <h3>Você ainda não tem contatos cadastrados!</h3>
+          <a class="btn btn-lg btn-outline-secondary mt-5" href="/contato/index">Adicionar primeiro contato</a>
+        </div>
+      <% } %>
     </div>
 
     <div class="col-lg-2"></div>

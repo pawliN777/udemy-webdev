@@ -18,9 +18,7 @@ exports.register = async function (req, res) {
     }
 
     req.flash('success', 'Contato adicionado!');
-    req.session.save(() =>
-      res.redirect(`/contato/index/${contato.contato._id}`),
-    );
+    req.session.save(() => res.redirect('/'));
     return;
   } catch {
     res.render('404');
@@ -56,10 +54,25 @@ exports.edit = async function (req, res) {
     }
 
     req.flash('success', 'Contato editado!');
-    req.session.save(() => res.redirect(`/contato/index/${req.params.id}`));
+    req.session.save(() => res.redirect('/'));
     return;
-  } catch(e) {
+  } catch (e) {
     console.error(e);
     res.render('404');
+  }
+};
+
+exports.delete = async function (req, res) {
+  try {
+    if (!req.params.id) return res.render('404');
+
+    const contato = await Contato.delete(req.params.id);
+
+    if (!contato) return res.render('404');
+
+    req.flash('success', 'Contato excluído!');
+    req.session.save(() => res.redirect('/'));
+  } catch (e) {
+    console.error('Não foi possível excluir o contato', e);
   }
 };

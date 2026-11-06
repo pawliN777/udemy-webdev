@@ -17,17 +17,6 @@ function Contato(body) {
   this.contato = null;
 }
 
-Contato.buscaPorId = async function (id) {
-  try {
-    if (typeof id !== 'string') return;
-
-    const user = await ContatoModel.findById(id);
-    return user;
-  } catch (e) {
-    throw new Error('Não foi possível buscar o ID', e);
-  }
-};
-
 Contato.prototype.register = async function () {
   try {
     this.valid();
@@ -36,7 +25,7 @@ Contato.prototype.register = async function () {
 
     this.contato = await ContatoModel.create(this.body);
   } catch (e) {
-    throw new Error('Não foi salvar o contato no banco de dados', e);
+    console.error('Não foi salvar o contato no banco de dados', e);
   }
 };
 
@@ -72,4 +61,36 @@ Contato.prototype.edit = async function (id) {
   this.contato = await ContatoModel.findByIdAndUpdate(id, this.body, { new: true });
 };
 
+// Métodos estáticos
+
+Contato.buscaPorId = async function (id) {
+  try {
+    if (typeof id !== 'string') return;
+
+    const contato = await ContatoModel.findById(id);
+    return contato;
+  } catch (e) {
+    console.error('Erro ao buscar o id', e);
+  }
+};
+
+Contato.buscaContatos = async function () {
+  try {
+    const contatos = await ContatoModel.find()
+      .sort({ criadoEm: -1 });
+    return contatos;
+  } catch (e) {
+    console.error('Erro ao buscar os contatos', e);
+  }
+};
+
+Contato.delete = async function (id) {
+  try {
+    if (typeof id !== 'string') return;
+    const contato = await ContatoModel.findOneAndDelete({ _id: id });
+    return contato;
+  } catch (e) {
+    console.error('Erro ao excluir o contato', e);
+  }
+};
 module.exports = Contato;
