@@ -5,43 +5,60 @@
     <div class="col-lg-2"></div>
 
     <div class="col-lg-8 my-5">
-      <h1 class="text-center">Agenda</h1>
-      <p class="text-center lead">Seus contatos abaixo</p>
-
       <%- include('includes/messages') %>
 
-      <% if (contatos.length > 0) { %>
+      <% if (user) { %>
+      <h1 class="text-center">Agenda</h1>
+      <h1 class="text-center">Hey <%= user.email %>!</h1>
+      <p class="text-center lead">Wellcome to Agenda! Your contacts below <i class="bi bi-arrow-down"></i></p>
+
+      <% if (contacts.length > 0) { %>
       <div class="text-center">
-        <a class="btn btn-lg btn-outline-primary mt-5" href="/contato/index"><i class="bi bi-plus-lg"></i> Adicionar</a>
+        <a class="btn btn-lg btn-outline-primary mt-5" href="/contact"><i class="bi bi-plus-lg"></i> Add a new contact</a>
       </div>
       <div class="responsive-table table-borderless text-center">
         <table class="table my-5">
-          <th>NOME</th>
-          <th>SOBRENOME</th>
-          <th>EMAIL</th>
-          <th>TELEFONE</th>
-          <% contatos.forEach(contato => { %>
-            <tr class="border-bottom border-top">
-              <td><%= contato.nome %></td>
-              <td><%= contato.sobrenome %></td>
-              <td><%= contato.email %></td>
-              <td><%= contato.telefone %></td>
-              <td>
-                <a class="btn btn-sm btn-outline-primary" href="/contato/index/<%= contato._id %>"><i class="bi bi-pencil"></i></a>
-              </td>
-              <td>
-                <a class="btn btn-sm btn-outline-danger" href="/contato/delete/<%= contato._id %>"><i class="bi bi-trash"></i></a>
-              </td>
-            </tr>
+          <th>Forename</th>
+          <th>Lastname</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <% contacts.forEach(contact => { %>
+          <tr class="border-bottom border-top">
+            <td>
+              <%= contact.forename %>
+            </td>
+            <td>
+              <%= contact.lastname %>
+            </td>
+            <td>
+              <%= contact.email %>
+            </td>
+            <td>
+              <%= contact.phone %>
+            </td>
+            <td>
+              <a href="/contact/info/<%= contact._id %>"><i class="bi bi-pencil"></i></a>
+            </td>
+            <td>
+              <a class="text-danger" href="/contact/delete/<%= contact._id %>"><i class="bi bi-trash"></i></a>
+            </td>
+          </tr>
           <% }); %>
         </table>
       </div>
       <% } else { %>
-        <div style="color: lightgray;" class="text-center mt-5">
-          <h1><i class="bi bi-x-lg"></i></h1>
-          <h3>Você ainda não tem contatos cadastrados!</h3>
-          <a class="btn btn-lg btn-outline-secondary mt-5" href="/contato/index">Adicionar primeiro contato</a>
-        </div>
+      <div style="color: lightgray;" class="text-center mt-5">
+        <h1><i class="bi bi-x-lg"></i></h1>
+        <h3>You not have contacts yet.</h3>
+        <a class="btn btn-lg btn-outline-secondary mt-5" href="/contact">Add first contact</a>
+      </div>
+      <% } %>
+      <% } else { %>
+      <div class="d-flex justify-content-center align-items-center text-center flex-column" style="height: 75vh">
+        <h1>You are not logged!</h1>
+        <p>You need to be logged to see your contacts.</p>
+        <a class="btn btn-lg btn-outline-primary" href="/account">Login or create account</a>
+      </div>
       <% } %>
     </div>
 

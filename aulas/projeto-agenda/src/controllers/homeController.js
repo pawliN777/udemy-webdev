@@ -1,10 +1,15 @@
-const Contato = require('../models/ContatoModel');
+import Contact from '../models/ContactModel.js';
 
-exports.index = async (req, res) => {
-  const contatos = await Contato.buscaContatos();
-  res.render('index', { contatos });
-};
+export async function index(request, response) {
+  try {
+    const contacts = await Contact.getContacts();
+    response.render('index', { contacts });
+  } catch (error) {
+    response.render('404');
+    console.error('Error to load contacts from database', error);
+  }
+}
 
-exports.home = async (req, res) => {
-  res.redirect('/home');
-};
+export function redirect(request, response) {
+  response.redirect('/home');
+}

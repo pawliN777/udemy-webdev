@@ -1,7 +1,11 @@
-require('dotenv').config();
-const express = require('express');
+import dotenv from 'dotenv';
+dotenv.config();
+
+import express from 'express';
 const app = express();
-const mongoose = require('mongoose');
+
+import mongoose from 'mongoose';
+
 mongoose
   .connect(process.env.CONNECTIONSTRING, {
     useNewUrlParser: true,
@@ -9,24 +13,33 @@ mongoose
     useFindAndModify: false,
   })
   .then(() => {
-    app.emit('pronto');
+    app.emit('Ready!');
   })
-  .catch((e) => { throw new Error('Erro ao conectar com o banco de dados', e); });
-const session = require('express-session');
-const MongoStore = require('connect-mongo');
-const flash = require('connect-flash');
-const routes = require('./routes');
-const path = require('path');
-const helmet = require('helmet');
-const csrf = require('csurf');
-const {
+  .catch((error) => {
+    console.error('Error to connect to database', error);
+  });
+
+import session from 'express-session';
+import MongoStore from 'connect-mongo';
+import flash from 'connect-flash';
+import { router } from './routes.js';
+import helmet from 'helmet';
+import csrf from 'csurf';
+
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+import {
   middlewareGlobal,
   checkCsrfError,
   csrfMiddleware,
-} = require('./src/middlewares/middleware');
+} from './src/middlewares/middleware.js';
 
 app.use(helmet());
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
@@ -48,15 +61,16 @@ app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 
 app.use(csrf());
+
 // Nossos próprios middlewares
 app.use(middlewareGlobal);
 app.use(checkCsrfError);
 app.use(csrfMiddleware);
-app.use(routes);
+app.use(router);
 
-app.on('pronto', () => {
+app.on('Ready!', () => {
   app.listen(3000, () => {
-    console.log('Acessar http://localhost:3000');
-    console.log('Servidor executando na porta 3000');
+    console.log('Access http://localhost:3000');
+    console.log('Server is running on port 3000');
   });
 });

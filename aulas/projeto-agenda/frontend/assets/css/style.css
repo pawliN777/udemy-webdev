@@ -4,6 +4,6 @@ body {
   font-family: 'Montserrat', sans-serif !important;
 }
 
-button {
-  font-weight: 600;
+.btn {
+  font-weight: 500 !important;
 }

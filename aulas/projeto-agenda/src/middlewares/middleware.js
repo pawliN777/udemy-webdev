@@ -1,33 +1,29 @@
-exports.middlewareGlobal = (req, res, next) => {
-  res.locals.errors = req.flash('errors');
-  res.locals.success = req.flash('success');
-  res.locals.user = req.session.user;
+export function middlewareGlobal(request, response, next) {
+  response.locals.errors = request.flash('errors');
+  response.locals.success = request.flash('success');
+  response.locals.user = request.session.user;
   next();
-};
+}
 
-exports.outroMiddleware = (req, res, next) => {
-  next();
-};
-
-exports.checkCsrfError = (err, req, res, next) => {
-  if (err) {
-    return res.render('404');
+export function checkCsrfError(error, request, response, next) {
+  if (error) {
+    return response.render('404');
   }
 
   next();
-};
+}
 
-exports.csrfMiddleware = (req, res, next) => {
-  res.locals.csrfToken = req.csrfToken();
+export function csrfMiddleware(request, response, next) {
+  response.locals.csrfToken = request.csrfToken();
   next();
-};
+}
 
-exports.loginRequired = (req, res, next) => {
-  if (!req.session.user) {
-    req.flash('errors', 'Você precisa estar logado.');
-    req.session.save(() => res.redirect('/login/index'));
+export function loginRequired(request, response, next) {
+  if (!request.session.user) {
+    request.flash('errors', 'You need to be logged.');
+    request.session.save(() => response.redirect('/account'));
     return;
   }
 
   next();
-};
+}

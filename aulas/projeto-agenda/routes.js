@@ -1,27 +1,25 @@
-const express = require('express');
-const route = express.Router();
+import express from 'express';
+export const router = express.Router();
 
-const homeController = require('./src/controllers/homeController');
-const loginController = require('./src/controllers/loginController');
-const contatoController = require('./src/controllers/contatoController');
+import * as homeController from './src/controllers/homeController.js';
+import * as accountController from './src/controllers/accountController.js';
+import * as contactController from './src/controllers/contactController.js';
 
-const { loginRequired } = require('./src/middlewares/middleware');
+import { loginRequired } from './src/middlewares/middleware.js';
 
 // Rotas da home
-route.get('/home', loginRequired, homeController.index);
-route.get('/', loginRequired, homeController.home);
+router.get('/home', homeController.index);
+router.get('/', homeController.redirect);
 
 // Rotas de login
-route.get('/login/index', loginController.index);
-route.post('/login/register', loginController.register);
-route.post('/login/login', loginController.login);
-route.get('/login/logout', loginController.logout);
+router.get('/account', accountController.index);
+router.post('/account/register', accountController.register);
+router.post('/account/login', accountController.login);
+router.get('/account/logout', accountController.logout);
 
 // Rotas de contato
-route.get('/contato/index', loginRequired, contatoController.index);
-route.post('/contato/register', loginRequired, contatoController.register);
-route.get('/contato/index/:id', loginRequired, contatoController.editIndex);
-route.post('/contato/edit/:id', loginRequired, contatoController.edit);
-route.get('/contato/delete/:id', loginRequired, contatoController.delete);
-
-module.exports = route;
+router.get('/contact', loginRequired, contactController.index);
+router.post('/contact/register', loginRequired, contactController.register);
+router.get('/contact/info/:id', loginRequired, contactController.info);
+router.post('/contact/edit/:id', loginRequired, contactController.edit);
+router.get('/contact/delete/:id', loginRequired, contactController.del);
