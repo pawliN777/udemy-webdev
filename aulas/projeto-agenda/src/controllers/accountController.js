@@ -2,7 +2,9 @@ import Account from '../models/AccountModel.js';
 import Contact from '../models/ContactModel.js';
 
 export async function index(request, response) {
-  const contacts = await Contact.getContacts();
+  const contacts = request.session.user
+    ? await Contact.getContacts(request.session.user._id)
+    : [];
 
   if (request.session.user) return response.render('index', { contacts });
 

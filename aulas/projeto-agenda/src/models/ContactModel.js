@@ -6,15 +6,18 @@ const ContactSchema = new mongoose.Schema({
   lastname: { type: String, required: false, default: '' },
   email: { type: String, required: false, default: '' },
   phone: { type: String, required: false, default: '' },
+
+  accountId: { type: String, required: true },
   createdAt: { type: Date, default: Date.now },
 });
 
 const ContactModel = mongoose.model('Contact', ContactSchema);
 
 export default class Contact {
-  constructor(body) {
+  constructor(body, accountId) {
     this.body = body;
     this.errors = [];
+    this.accountId = accountId;
     this.contact = null;
   }
 
@@ -30,6 +33,7 @@ export default class Contact {
       lastname: this.body.lastname,
       email: this.body.email,
       phone: this.body.phone,
+      accountId: this.accountId,
     };
   }
 
@@ -69,8 +73,10 @@ export default class Contact {
     return contact;
   }
 
-  static async getContacts() {
-    const contacts = await ContactModel.find().sort({ createdAt: -1 });
+  static async getContacts(accountId) {
+    const contacts = await ContactModel.find({ accountId }).sort({
+      createdAt: -1,
+    });
     return contacts;
   }
 

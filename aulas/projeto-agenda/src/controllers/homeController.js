@@ -2,7 +2,11 @@ import Contact from '../models/ContactModel.js';
 
 export async function index(request, response) {
   try {
-    const contacts = await Contact.getContacts();
+    const user = request.session.user;
+    const accountId = user ? (user._id ? user._id.toString() : user.id) : null;
+
+    const contacts = accountId ? await Contact.getContacts(accountId) : [];
+
     response.render('index', { contacts });
   } catch (error) {
     response.render('404');

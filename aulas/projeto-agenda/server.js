@@ -7,11 +7,7 @@ const app = express();
 import mongoose from 'mongoose';
 
 mongoose
-  .connect(process.env.CONNECTIONSTRING, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-  })
+  .connect(process.env.CONNECTIONSTRING)
   .then(() => {
     app.emit('Ready!');
   })
@@ -22,7 +18,7 @@ mongoose
 import session from 'express-session';
 import MongoStore from 'connect-mongo';
 import flash from 'connect-flash';
-import { router } from './routes.js';
+import { route } from './routes.js';
 import helmet from 'helmet';
 import csrf from 'csurf';
 
@@ -62,11 +58,11 @@ app.set('view engine', 'ejs');
 
 app.use(csrf());
 
-// Nossos próprios middlewares
+// Our middlewares
 app.use(middlewareGlobal);
 app.use(checkCsrfError);
 app.use(csrfMiddleware);
-app.use(router);
+app.use(route);
 
 app.on('Ready!', () => {
   app.listen(3000, () => {

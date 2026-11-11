@@ -10,7 +10,7 @@
       <% if (user) { %>
       <h1 class="text-center">Agenda</h1>
       <h1 class="text-center">Hey <%= user.email %>!</h1>
-      <p class="text-center lead">Wellcome to Agenda! Your contacts below <i class="bi bi-arrow-down"></i></p>
+      <p class="text-center lead">Welcome to Agenda! Your contacts below <i class="bi bi-arrow-down"></i></p>
 
       <% if (contacts.length > 0) { %>
       <div class="text-center">
@@ -19,7 +19,7 @@
       <div class="responsive-table table-borderless text-center">
         <table class="table my-5">
           <th>Forename</th>
-          <th>Lastname</th>
+          <th>Surname</th>
           <th>Email</th>
           <th>Phone</th>
           <% contacts.forEach(contact => { %>

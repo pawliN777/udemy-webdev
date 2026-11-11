@@ -1,5 +1,5 @@
 import express from 'express';
-export const router = express.Router();
+export const route = express.Router();
 
 import * as homeController from './src/controllers/homeController.js';
 import * as accountController from './src/controllers/accountController.js';
@@ -8,18 +8,18 @@ import * as contactController from './src/controllers/contactController.js';
 import { loginRequired } from './src/middlewares/middleware.js';
 
 // Rotas da home
-router.get('/home', homeController.index);
-router.get('/', homeController.redirect);
+route.get('/home', homeController.index);
+route.get('/', homeController.redirect);
 
-// Rotas de login
-router.get('/account', accountController.index);
-router.post('/account/register', accountController.register);
-router.post('/account/login', accountController.login);
-router.get('/account/logout', accountController.logout);
+// Rotas de account
+route.get('/account', accountController.index);
+route.post('/account/register', accountController.register);
+route.post('/account/login', accountController.login);
+route.get('/account/logout', accountController.logout);
 
-// Rotas de contato
-router.get('/contact', loginRequired, contactController.index);
-router.post('/contact/register', loginRequired, contactController.register);
-router.get('/contact/info/:id', loginRequired, contactController.info);
-router.post('/contact/edit/:id', loginRequired, contactController.edit);
-router.get('/contact/delete/:id', loginRequired, contactController.del);
+// Rotas de contact
+route.get('/contact', loginRequired, contactController.index);
+route.post('/contact/register', loginRequired, contactController.register);
+route.get('/contact/info/:id', loginRequired, contactController.info);
+route.post('/contact/edit/:id', loginRequired, contactController.edit);
+route.get('/contact/delete/:id', loginRequired, contactController.del);

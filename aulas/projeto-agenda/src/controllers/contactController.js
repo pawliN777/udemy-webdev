@@ -8,7 +8,16 @@ export function index(request, response) {
 
 export async function register(request, response) {
   try {
-    const contact = new Contact(request.body);
+    const user = request.session.user;
+    const accountId = user ? (user._id ? user._id.toString() : user.id) : null;
+
+    if (!accountId) {
+      request.flash('errors', ['You need to be logged to add a contact.']);
+      request.session.save(() => response.redirect('/account'));
+      return;
+    }
+
+    const contact = new Contact(request.body, request.session.user._id);
     await contact.register();
 
     if (contact.errors.length > 0) {
