@@ -9,7 +9,7 @@ import mongoose from 'mongoose';
 mongoose
   .connect(process.env.CONNECTIONSTRING)
   .then(() => {
-    app.emit('Ready!');
+    app.emit('ready');
   })
   .catch((error) => {
     console.error('Error to connect to database', error);
@@ -41,7 +41,7 @@ app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 const sessionOptions = session({
-  secret: 'akasdfj0út23453456+54qt23qv  qwf qwer qwer qewr asdasdasda a6()',
+  secret: process.env.SESSION_SECRET,
   store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
   resave: false,
   saveUninitialized: false,
@@ -64,7 +64,7 @@ app.use(checkCsrfError);
 app.use(csrfMiddleware);
 app.use(route);
 
-app.on('Ready!', () => {
+app.on('ready', () => {
   app.listen(3000, () => {
     console.log('Access http://localhost:3000');
     console.log('Server is running on port 3000');
