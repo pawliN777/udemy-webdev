@@ -14,7 +14,7 @@
           <h4>Register</h4>
           <p>Create a account now!</p>
 
-          <form action="/account/register" method="POST">
+          <form class="form-register" action="/account/register" method="POST">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <div class="form-group">
               <label>Email</label>
@@ -32,7 +32,7 @@
           <h4>Login</h4>
           <p>Login to your account!</p>
 
-          <form action="/account/login" method="POST">
+          <form class="form-login" action="/account/login" method="POST">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <div class="form-group">
               <label>Email</label>
